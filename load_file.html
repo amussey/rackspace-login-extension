@@ -8,15 +8,12 @@
 
     <title>Add Accounts :: Rackspace Account Login Extension</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/sticky-footer.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/load_file.css" rel="stylesheet">
 
     <!-- Javascript -->
     <script src="js/jquery-1.10.2.min.js"></script>
-    <script src="js/lodash.js"></script>
     <script src="js/common.js"></script>
     <script src="js/load_file.js"></script>
   </head>
@@ -33,8 +30,11 @@
         </div>
         <p class="lead"><!-- comments --></p>
         <div class="row">
-          <div class="col-lg-12" style="background-color:#faa; padding:20px; border: 1px solid #000;">
-            <input type="file" id="files" name="file" />
+          <div class="col-lg-12 load_accounts" style="">
+            Upload a JSON file containing your user credentials.  Formatting instructions can be found <a href="https://github.com/amussey/rackspace-login-extension">here</a>. <br />
+            <br />
+            <input type="file" id="files" name="file" /><br />
+            <input type="checkbox" id="developer_mode" name="developer_mode" /> <label for="developer_mode">Developer mode</label>
           </div>
         </div>
         <div class="row" id="accounts">
@@ -50,7 +50,7 @@
 
     <div id="footer">
       <div class="container">
-        <p class="text-muted credit">&copy;2013 Andrew Mussey</p>
+        <p class="text-muted credit">&copy;2013 Andrew Mussey, <a href="http://amussey.com">amussey.com</a></p>
       </div>
     </div>
 

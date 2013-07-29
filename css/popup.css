@@ -1,0 +1,40 @@
+body {
+  min-width: 357px;
+  overflow-x: scroll;
+  padding: 10px;
+  background-color:#eeeeee;
+}
+
+img {
+  margin: 5px;
+  border: 2px solid black;
+  vertical-align: middle;
+  width: 75px;
+  height: 75px;
+}
+.user_account {
+  color:#222;
+  background-color:#fff;
+  border: 1px solid #bbb;
+  padding: 10px;
+  margin: 5px;
+  box-shadow: 3px 3px 4px #ccc;
+}
+
+.load_accounts {
+  margin-top: 12px;
+  color:#fff;
+  background-color:#c21c24;
+  border: 1px solid #a31002;
+  padding: 10px;
+  margin: 5px;
+  box-shadow: 3px 3px 4px #ccc;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.username_subtext {
+  color:#777;
+  font-size: 11px;
+}

@@ -8,7 +8,9 @@ $(document).ready(function(){
     for (var i = 0; i < accounts.length; i++) {
         $("body").prepend(' \
             <a href="#" class="login" username="' + accounts[i].username + '" password="' + accounts[i].password + '"> \
-            <div class="user_account">'+accounts[i].username+'</div> \
+            <div class="user_account">'
+            + (accounts[i].name == undefined ? accounts[i].username  : accounts[i].name + '<br /><font class="username_subtext">' + accounts[i].username + '</font>') +
+            '</div> \
             </a>');
     }
     $(".login").click(function(){

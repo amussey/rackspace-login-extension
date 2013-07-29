@@ -1,8 +1,4 @@
-
 $(document).ready(function(){
-    $("#load_acccounts").click(function(){
-        readBlob();
-    });
     document.getElementById('files').addEventListener('change', readBlob, false);
 });
 
@@ -26,12 +22,15 @@ function readBlob(evt) {
         
             localStorage["accounts"] = JSON.stringify(new_json);
 
-            for (var i = 0; i < new_json.length; i++) {
-                $("#accounts").append(return_div(new_json[i].username, new_json[i].password));
+            if (!$('#developer_mode').is(":checked")) {
+                window.close();
+            } else {
+                for (var i = 0; i < new_json.length; i++) {
+                    $("#accounts").append(return_div(new_json[i].username, new_json[i].password, new_json[i].name));
+                }
+                $("#code").append(evt.target.result);
             }
-        
-            $("#code").append(evt.target.result);
-            window.close();
+
         }
     };
 
@@ -39,7 +38,14 @@ function readBlob(evt) {
     reader.readAsBinaryString(blob);
 }
   
-
-function return_div(username, password) {
-  return '<div class="col-lg-12" style="background-color:#faa; padding:20px; border: 1px solid #000;">' + username +  '</div>';
+function return_div(username, password, name) {
+    return '<div class="row"> \
+                <div class="col-lg-3"> \
+                </div> \
+                    <div class="col-lg-6 username_debug">'
+                    + (name == undefined ? username : name + '<br /><font class="username_subtext">' + username + '</font>') +
+                    '</div> \
+                <div class="col-lg-3"> \
+                </div> \
+            </div>';
 }

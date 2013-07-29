@@ -1,6 +1,6 @@
 # Rackspace Login Extension for Chrome
 
-
+![Rackspace Login Extension](http://i.imgur.com/euDVpU5.png)
 
 
 
@@ -10,7 +10,7 @@
 2. In your Google Chrome browser, navigate to the Extensions menu.  (This is located under Settings > Tools > Extensions.)
 3. Click the "Load unpacked extension..." and select the folder where the repo was cloned.  (If the button to do this is missing, make sure that the "Developer Mode" is checked.)
 4. You should now see the Rackspace logo on your extension bar:  
-  ![Alt text](http://i.imgur.com/thmhTLe.png)  
+  ![Plugin button in the browser](http://i.imgur.com/thmhTLe.png)  
   Click on it, and select the red "Load Accounts" button.
 5. On the add accounts page, select your accounts JSON file, formatted in the style listed below.
 

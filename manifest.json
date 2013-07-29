@@ -1,0 +1,44 @@
+{
+  "name": "Rackspace Account Selector",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "description": "Use multiple accounts to login to Rackspace's cloud control panel.",
+  "icons": {
+    "128": "icon.png"
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["js/jquery-1.10.2.min.js", "js/background.js"]
+  },
+  "content_scripts": [{
+    "matches": [
+      "http://*.rackspace.com/",
+      "http://rackspace.com/",
+      "http://*.rackspace.net/",
+      "http://rackspace.net/",
+      "https://*.rackspace.com/",
+      "https://www.rackspace.com/",
+      "https://*.rackspace.net/",
+      "https://rackspace.net/"
+    ],
+    "js": [
+      "js/jquery-1.10.2.min.js",
+      "js/content_script.js"
+    ]
+  }],
+  "permissions": [
+    "tabs",
+    "http://*.rackspace.com/",
+    "http://rackspace.com/",
+    "http://*.rackspace.net/",
+    "http://rackspace.net/",
+    "https://*.rackspace.com/",
+    "https://www.rackspace.com/",
+    "https://*.rackspace.net/",
+    "https://rackspace.net/"
+  ]
+}
